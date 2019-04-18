@@ -1,8 +1,12 @@
-liststr = ['asd', 'asdas', 'as', 'asddfg', 'd', 'asdd']
+from ContextManager import FileOpen
+
+with FileOpen(r'C:\Users\Aliaksandr.Baryhin\Desktop\dataFiles\task2_data.txt') as open_file:
+    list_of_strings_from_file = list(open_file.read().split(' '))
 
 
-def func2(liststr):
-    return sorted(liststr, key=len)
+def list_sort(sortable_list):
+    return sorted(sortable_list, key=len)
 
 
-print(func2(liststr))
+print(list_of_strings_from_file)
+print(list_sort(list_of_strings_from_file))
