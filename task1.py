@@ -1,4 +1,3 @@
-import random
 from ContextManager import FileOpen
 
 with FileOpen(r'C:\Users\Aliaksandr.Baryhin\Desktop\dataFiles\task1_data.txt') as open_file:
