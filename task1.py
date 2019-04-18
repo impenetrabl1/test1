@@ -1,12 +1,14 @@
 import random
+from ContextManager import FileOpen
 
-list1 = [random.randrange(10) for i in range(0, 10)]
-
-
-def func1(list1):
-    list2 = [list1.count(j) for j in list1]
-    return list1[list2.index(max(list2))]
+with FileOpen(r'C:\Users\Aliaksandr.Baryhin\Desktop\dataFiles\task1_data.txt') as open_file:
+    list_of_numbers_from_file = list(map(int, open_file.read().split(' ')))
 
 
-print(list1)
-print(func1(list1))
+def max_count_element(processing_list):
+    count_list = [processing_list.count(j) for j in processing_list]
+    return processing_list[count_list.index(max(count_list))]
+
+
+print(list_of_numbers_from_file)
+print(max_count_element(list_of_numbers_from_file))
