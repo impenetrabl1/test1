@@ -1,23 +1,26 @@
 import calendar
+from ContextManager import FileOpen
+
+with FileOpen(r'C:\Users\Aliaksandr.Baryhin\Desktop\dataFiles\task4_data.txt', 'r') as open_file:
+    year = int(open_file.read())
 
 
-def func4(year):
-    if year % 4 != 0:
-        print('обычный')
-    elif year % 100 != 0:
-        print('высокосный')
-    elif year % 400 != 0:
-        print('обычный')
-    else:
-        print('высокосный')
+def is_leap_year(year_param):
+    if year_param % 4 != 0:
+        return False
+    elif year_param % 100 != 0:
+        return True
+    elif year_param % 400 != 0:
+        return False
+    return True
 
 
-def func4_2(year):
-    if calendar.isleap(year):
-        print('высокосный')
-    else:
-        print('обычный')
+def is_leap_year_2(year_param):
+    if calendar.isleap(year_param):
+        return True
+    return False
 
 
-func4(2019)
-func4_2(2019)
+with FileOpen(r'C:\Users\Aliaksandr.Baryhin\Desktop\dataFiles\task4_data.txt', 'a') as open_file:
+    open_file.write('\nIs this year is leap? ' + str(is_leap_year(year)))
+    open_file.write('\nIs this year is leap? ' + str(is_leap_year_2(year)))
