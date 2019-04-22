@@ -22,4 +22,4 @@ def calc_range(n):
 
 
 with FileOpen(r'C:\Users\Aliaksandr.Baryhin\Desktop\dataFiles\task6_data.txt', 'a') as open_file:
-    open_file.write('\nLast 10 numbers of range: '+str(calc_range(number)))
+    open_file.write('\nLast 10 numbers of range: ' + str(calc_range(number)))
