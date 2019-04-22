@@ -1,14 +1,18 @@
-import random
+from ContextManager import FileOpen
 
-list1 = [random.randrange(10) for i in range(0, 10)]
-
-
-def func5(list1):
-    for i in range(len(list1)):
-        for j in range(len(list1) - 1):
-            if list1[j] > list1[j + 1]:
-                list1[j], list1[j + 1] = list1[j + 1], list1[j]
-    return list1
+with FileOpen(r'.\dataFiles\task5_data.txt', 'r') as open_file:
+    list_of_numbers_from_file = list(map(int, open_file.read().split(' ')))
 
 
-print(func5(list1))
+def sorting_list(processing_list):
+    for i in range(len(processing_list)):
+        for j in range(len(processing_list) - i - 1):
+            if processing_list[j] > processing_list[j + 1]:
+                processing_list[j], processing_list[j + 1] = processing_list[j + 1], processing_list[j]
+    return processing_list
+
+
+with FileOpen(r'.\dataFiles\task5_data.txt', 'a') as open_file:
+    open_file.write('\nSorted list: ')
+    for a in sorting_list(list_of_numbers_from_file):
+        open_file.write(str(a) + ' ')
