@@ -6,13 +6,9 @@ with FileOpen(r'C:\Users\Aliaksandr.Baryhin\Desktop\dataFiles\task4_data.txt', '
 
 
 def is_leap_year(year_param):
-    if year_param % 4 != 0:
-        return False
-    elif year_param % 100 != 0:
+    if (year_param % 4 == 0) and (year_param % 100 != 0) or (year_param % 400 == 0):
         return True
-    elif year_param % 400 != 0:
-        return False
-    return True
+    return False
 
 
 def is_leap_year_2(year_param):
