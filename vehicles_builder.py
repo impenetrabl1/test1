@@ -81,11 +81,9 @@ class MotorcycleBuilder(Builder):
 
 if __name__ == "__main__":
     director = VehicleBuildDirector()
-    car_builder = CarBuilder()
     director.set_builder(CarBuilder())
     car = director.get_vehicle()
     print(car)  # Wheels: 4, engine: injector, transmission: auto
-    motorcycle_builder = MotorcycleBuilder()
     director.set_builder(MotorcycleBuilder())
     motorcycle = director.get_vehicle()
     print(motorcycle)  # Wheels: 2, engine: diesel, transmission: manual
