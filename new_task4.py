@@ -14,5 +14,5 @@ def is_leap_year_2(year_param):
 
 
 with FileOpen(r'C:\Users\Aliaksandr.Baryhin\Desktop\dataFiles\task4_data.txt', 'a') as open_file:
-    open_file.write('\nIs this year is leap? ' + str(is_leap_year(year)))
-    open_file.write('\nIs this year is leap? ' + str(is_leap_year_2(year)))
+    open_file.write('\nIs this year is leap? {}'.format(str(is_leap_year(year))))
+    open_file.write('\nIs this year is leap? {}'.format(str(is_leap_year_2(year))))
