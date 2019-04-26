@@ -1,0 +1,22 @@
+{ "csv_data":
+[
+{
+"name" : "Bob",
+"city, street" : "Ney York, some street",
+"age" : "25",
+"ID" : "1"
+},
+{
+"name" : "Alexandr",
+"city, street" : "Mogilev, some street",
+"age" : "19",
+"ID" : "2"
+},
+{
+"name" : "Misha",
+"city, street" : "Mogilev, some street",
+"age" : "19",
+"ID" : "3"
+}
+]
+}
