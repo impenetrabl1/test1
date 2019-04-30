@@ -1,9 +1,9 @@
 class Vehicle:
     @staticmethod
     def factory(tires):
-        if tires == 2:
-            return Car()
         if tires == 4:
+            return Car()
+        if tires == 2:
             return Motorcycle()
 
 
@@ -29,6 +29,6 @@ class Motorcycle(Vehicle):
 
 if __name__ == "__main__":
     car = Vehicle.factory(4)
-    print(car)  # Tires: 2, engine: diesel, transmission: manual
+    print(car)  # Tires: 4, engine: diesel, transmission: manual
     motorcycle = Vehicle.factory(2)
-    print(motorcycle)  # Tires: 4, engine: injector, transmission: auto
+    print(motorcycle)  # Tires: 2, engine: injector, transmission: auto
