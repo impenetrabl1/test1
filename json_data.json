@@ -1,6 +1,4 @@
-{ "csv_data":
-[
-{
+{ "csv_data": [{
 "name" : "Bob",
 "city, street" : "Ney York, some street",
 "age" : "25",
@@ -17,6 +15,4 @@
 "city, street" : "Mogilev, some street",
 "age" : "19",
 "ID" : "3"
-}
-]
-}
+}]}
